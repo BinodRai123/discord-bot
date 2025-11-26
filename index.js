@@ -16,7 +16,10 @@ client.once("ready", () => {
 client.on("messageCreate", (message) => {
   // console.log(`${message.author.username} send message -> ${message.content}`);
   const bot = message.author.bot;
-  if (bot) return;
+  if (bot) {
+    message.reply("Don't mimic me madarchod bot");
+    return;
+  }
 
     message.reply("hello how can i help you today ?");
   
